@@ -1,0 +1,16 @@
+{
+  "name": "module-01-shared",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Shared deps for all Module 1 video demos. Copy package.json + tsconfig.json into each video folder, or symlink.",
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.30.0",
+    "@anthropic-ai/claude-agent-sdk": "^0.2.0",
+    "dotenv": "^16.4.5"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.0"
+  }
+}

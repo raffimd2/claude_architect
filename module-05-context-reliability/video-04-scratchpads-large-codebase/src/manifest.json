@@ -1,0 +1,25 @@
+{
+  "manifest_version": 1,
+  "coordinator": "research-coordinator",
+  "created_at": "2026-04-18T09:00:00Z",
+  "agents": [
+    {
+      "name": "web-search",
+      "state_file": ".agent-state/web-search.json",
+      "last_known": "in_progress",
+      "last_query": "AI music industry impact 2024",
+      "partial_results_count": 4
+    },
+    {
+      "name": "doc-analyser",
+      "state_file": ".agent-state/doc-analyser.json",
+      "last_known": "completed",
+      "findings_count": 7
+    },
+    {
+      "name": "synthesiser",
+      "state_file": ".agent-state/synthesiser.json",
+      "last_known": "blocked_on_web_search"
+    }
+  ]
+}

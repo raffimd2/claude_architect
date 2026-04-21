@@ -1,0 +1,41 @@
+name: Claude PR review
+
+on:
+  pull_request:
+    types: [opened, synchronize]
+
+jobs:
+  review:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pull-requests: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v4
+        with: { node-version: 20 }
+
+      - name: Install Claude Code
+        run: npm install -g @anthropic-ai/claude-code
+
+      # -p prevents interactive-input hang (the canonical exam answer)
+      # --output-format json + --json-schema gives us parseable findings
+      - name: Run review
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: |
+          git diff origin/${{ github.base_ref }}...HEAD > /tmp/diff.patch
+          claude -p "Review the diff at /tmp/diff.patch against .claude/rules/ and CLAUDE.md. \
+                     Produce findings only for the changed lines." \
+                --output-format json \
+                --json-schema .github/schemas/review-findings.json \
+                > /tmp/findings.json
+
+      - name: Post findings
+        if: always()
+        run: node .github/scripts/post-findings.js /tmp/findings.json
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

@@ -1,0 +1,141 @@
+<!--
+  GenAI Mentor — Certifications section.
+  Drop-in HTML fragment that matches the existing dark-theme, gradient-card
+  style used on the homepage (Build with AI / Build AI / Product Dev cards).
+  Pair with ./certification.css.
+-->
+<section class="gm-certs" id="certifications">
+  <div class="gm-certs__container">
+    <header class="gm-certs__header">
+      <h2>Professional <span class="gm-certs__accent">Certifications</span></h2>
+      <p>
+        Go beyond tutorials. Earn industry-recognized credentials — on a
+        structured, scenario-based path built around the official exam guides.
+      </p>
+    </header>
+
+    <div class="gm-certs__grid">
+      <!-- Claude Certified Architect -->
+      <article class="gm-cert-card gm-cert-card--architect">
+        <div class="gm-cert-card__badge">
+          <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true">
+            <path fill="currentColor" d="M12 2l2.4 6.9H22l-6.1 4.4 2.3 7.1L12 16l-6.2 4.4 2.3-7.1L2 8.9h7.6z"/>
+          </svg>
+          <span>Architect · Foundations</span>
+        </div>
+
+        <h3 class="gm-cert-card__title">Claude Certified Architect</h3>
+        <p class="gm-cert-card__subtitle">
+          Anthropic's official certification for solution architects building
+          production applications with Claude.
+        </p>
+
+        <div class="gm-cert-card__meta">
+          <div class="gm-cert-card__meta-item">
+            <span class="gm-cert-card__meta-label">Format</span>
+            <span class="gm-cert-card__meta-value">Scenario MCQ</span>
+          </div>
+          <div class="gm-cert-card__meta-item">
+            <span class="gm-cert-card__meta-label">Pass score</span>
+            <span class="gm-cert-card__meta-value">720 / 1000</span>
+          </div>
+          <div class="gm-cert-card__meta-item">
+            <span class="gm-cert-card__meta-label">Series</span>
+            <span class="gm-cert-card__meta-value">~38 videos</span>
+          </div>
+          <div class="gm-cert-card__meta-item">
+            <span class="gm-cert-card__meta-label">Time</span>
+            <span class="gm-cert-card__meta-value">~12 hrs</span>
+          </div>
+        </div>
+
+        <div class="gm-cert-card__domains">
+          <p class="gm-cert-card__section-title">Exam domains</p>
+          <ul>
+            <li><span class="gm-weight">27%</span> Agentic Architecture &amp; Orchestration</li>
+            <li><span class="gm-weight">20%</span> Claude Code Configuration &amp; Workflows</li>
+            <li><span class="gm-weight">20%</span> Prompt Engineering &amp; Structured Output</li>
+            <li><span class="gm-weight">18%</span> Tool Design &amp; MCP Integration</li>
+            <li><span class="gm-weight">15%</span> Context Management &amp; Reliability</li>
+          </ul>
+        </div>
+
+        <div class="gm-cert-card__learn">
+          <p class="gm-cert-card__section-title">What you'll master</p>
+          <ul class="gm-cert-card__checks">
+            <li>Build correct agentic loops with <code>stop_reason</code></li>
+            <li>Design coordinator–subagent multi-agent systems</li>
+            <li>Write MCP tools with structured error responses</li>
+            <li>Configure CLAUDE.md, <code>.claude/rules/</code>, and skills</li>
+            <li>Extract structured data with JSON schemas + retries</li>
+            <li>Manage context and provenance across long sessions</li>
+          </ul>
+        </div>
+
+        <div class="gm-cert-card__actions">
+          <a class="gm-btn gm-btn--primary" href="/certifications/claude-architect/">
+            Start the series
+            <svg viewBox="0 0 20 20" width="16" height="16" aria-hidden="true">
+              <path fill="currentColor" d="M7.3 4.3l5 5.7-5 5.7 1.4 1.3 6.3-7-6.3-7z"/>
+            </svg>
+          </a>
+          <a class="gm-btn gm-btn--ghost"
+             href="https://claudecertifications.com/claude-certified-architect/exam-guide"
+             target="_blank" rel="noopener">
+            Official exam guide
+          </a>
+        </div>
+      </article>
+
+      <!-- Placeholder card: roadmap certs -->
+      <article class="gm-cert-card gm-cert-card--roadmap">
+        <div class="gm-cert-card__badge gm-cert-card__badge--muted">
+          <span>Coming soon</span>
+        </div>
+        <h3 class="gm-cert-card__title">More certifications on the way</h3>
+        <p class="gm-cert-card__subtitle">
+          We're preparing structured learning paths for additional Anthropic,
+          MCP, and GenAI credentials. Subscribe to get notified the day a new
+          path launches.
+        </p>
+        <ul class="gm-cert-card__roadmap">
+          <li>Claude Certified Developer</li>
+          <li>MCP Server Design</li>
+          <li>Agent SDK · Advanced</li>
+        </ul>
+        <a class="gm-btn gm-btn--ghost"
+           href="https://www.youtube.com/@genai.mentor?sub_confirmation=1"
+           target="_blank" rel="noopener">
+          Notify me on YouTube
+        </a>
+      </article>
+    </div>
+
+    <!-- How the prep works -->
+    <div class="gm-certs__howto">
+      <h3>How our certification prep works</h3>
+      <div class="gm-certs__howto-grid">
+        <div class="gm-howto-step">
+          <div class="gm-howto-step__num">1</div>
+          <h4>Learn the domain</h4>
+          <p>Short, focused videos mapped 1:1 to each exam task statement.</p>
+        </div>
+        <div class="gm-howto-step">
+          <div class="gm-howto-step__num">2</div>
+          <h4>Build the lab</h4>
+          <p>Every module ends with a hands-on project you can commit to GitHub.</p>
+        </div>
+        <div class="gm-howto-step">
+          <div class="gm-howto-step__num">3</div>
+          <h4>Rehearse with mocks</h4>
+          <p>Sit a 60-question mock built in the same format as the real exam.</p>
+        </div>
+        <div class="gm-howto-step">
+          <div class="gm-howto-step__num">4</div>
+          <h4>Pass &amp; ship</h4>
+          <p>Walk into the exam confident — and have a portfolio to show for it.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

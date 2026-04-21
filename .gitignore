@@ -1,0 +1,29 @@
+# Local harness / tooling
+.claude/
+node_modules/
+dist/
+out/
+coverage/
+
+# Editor
+.vscode/
+.idea/
+
+# Env files (keep .env.example, exclude real .env)
+.env
+.env.local
+.env.*.local
+*.log
+
+# Video production source (not for public repo)
+**/SCRIPT.md
+**/VIDEO.md
+**/SLIDES.md
+*.pdf
+*.pptx
+*.ppt
+*.key
+
+# OS
+.DS_Store
+Thumbs.db
